@@ -1,0 +1,141 @@
+/* Ensure html, body, and root fill full viewport height */
+html, body {
+  height: 100vh;         /* Use full viewport height */
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+/* The root container already centers children */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* .app-wrapper: make it fill the height as well */
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;         /* Full height of parent */
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Main card styling — make it take more height */
+.radio-card {
+  width: 90%;
+  max-width: 350px;
+  min-height: 70vh;       /* Make the card take 70% of viewport height */
+  padding: 1.5rem;
+  background: #222;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread children vertically */
+}
+
+/* Center and size disc container */
+.disc-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  border: 5px solid #444;
+  box-shadow: inset 0 0 15px #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make cover image fill disc */
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Spin animation for disc */
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+/* Station info styling */
+.station-info h1 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.station-info h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Controls section */
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons styling */
+.play-button,
+.nav-button {
+  font-size: 1.8rem;
+  padding: 1rem;
+  background: #333;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 64px;
+  height: 64px;
+  transition: background 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button:hover,
+.nav-button:hover {
+  background: #555;
+}
+
+/* Install button styling */
+.install-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.install-button:hover {
+  background-color: #218838;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
