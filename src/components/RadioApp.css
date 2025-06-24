@@ -1,6 +1,5 @@
-/* Ensure html, body, and root fill full viewport height */
 html, body {
-  height: 100vh;         /* Use full viewport height */
+  height: 100vh;       
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -12,28 +11,25 @@ html, body {
   font-family: system-ui, sans-serif;
 }
 
-/* The root container already centers children */
 #root {
   width: 100%;
   height: 100%;
 }
 
-/* .app-wrapper: make it fill the height as well */
 .app-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;         /* Full height of parent */
+  height: 100%;         
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Main card styling — make it take more height */
 .radio-card {
   width: 90%;
   max-width: 350px;
-  min-height: 70vh;       /* Make the card take 70% of viewport height */
+  min-height: 70vh;     
   padding: 1.5rem;
   background: #222;
   border-radius: 1.5rem;
@@ -42,10 +38,9 @@ html, body {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Spread children vertically */
+  justify-content: space-between; 
 }
 
-/* Center and size disc container */
 .disc-container {
   width: 200px;
   height: 200px;
@@ -60,19 +55,16 @@ html, body {
   align-items: center;
 }
 
-/* Make cover image fill disc */
 .cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Spin animation for disc */
 .spin {
   animation: spin 4s linear infinite;
 }
 
-/* Station info styling */
 .station-info h1 {
   font-size: 1.6rem;
   margin: 0.5rem 0 0;
@@ -86,7 +78,6 @@ html, body {
   color: #aaa;
 }
 
-/* Controls section */
 .controls {
   margin-top: 1.5rem;
   display: flex;
@@ -94,7 +85,6 @@ html, body {
   gap: 1rem;
 }
 
-/* Buttons styling */
 .play-button,
 .nav-button {
   font-size: 1.8rem;
@@ -117,7 +107,6 @@ html, body {
   background: #555;
 }
 
-/* Install button styling */
 .install-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
@@ -134,8 +123,12 @@ html, body {
   background-color: #218838;
 }
 
-/* Spin animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.logo{
+  width: 60%;
+  height: auto;
 }
